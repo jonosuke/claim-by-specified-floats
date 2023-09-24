@@ -1,0 +1,57 @@
+{
+	"contracts": {
+		"FLOAT": "./float/FLOAT.cdc",
+		"FLOATEventSeries": "./float-eventseries/FLOATEventSeries.cdc",
+		"FLOATVerifiers": "./float/FLOATVerifiers.cdc",
+		"FindViews": "./core-contracts/FindViews.cdc",
+		"FlowToken": {
+			"source": "./core-contracts/FlowToken.cdc",
+			"aliases": {
+				"emulator": "0ae53cb6e3f42a79"
+			}
+		},
+		"FungibleToken": {
+			"source": "./core-contracts/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "ee82856bf20e2aa6"
+			}
+		},
+		"GrantedAccountAccess": "./sharedaccount/GrantedAccountAccess.cdc",
+		"MetadataViews": {
+			"source": "./core-contracts/MetadataViews.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"MyFLOATVerifiers": "./float/MyFLOATVerifiers.cdc",
+		"NonFungibleToken": {
+			"source": "./core-contracts/NonFungibleToken.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		}
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "2e1e76ef8aba43d049398807b59510ccd3a2a82b6e0a3c11d5ea6a8d537b5d3d"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"FLOAT",
+				"FindViews",
+				"GrantedAccountAccess",
+				"FLOATEventSeries",
+				"FLOATVerifiers"
+			]
+		}
+	}
+}
